@@ -168,7 +168,7 @@ module.exports = (robot) ->
       for roomId in store.getRooms()
         robot.messageRoom roomId, """
           @#{store.userId} fav! #{track.title}
-          #{track.permalink_url}
+          #{track.permalink_url.replace(/^https?/, 'http')}
         """
 
       return
