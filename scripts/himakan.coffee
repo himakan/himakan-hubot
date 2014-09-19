@@ -23,7 +23,10 @@
 module.exports = (robot) ->
 
   robot.hear /(かえ|帰)(る|ろ)/, (msg) ->
-    msg.reply msg.random ["おつお :-h:", "おつー :-h:", "おつかれ〜 :-h:", "お疲れさまでした :-h:", "ばいお :-h:", ":-h:"]
+    msg.reply msg.random ["おつお:-h:", "おつー:-h:", "おつかれ〜:-h:", "お疲れさまでした:-h:", "ばいお :-h:", ":-h:"]
+
+  robot.hear /おつお/, (msg) ->
+    msg.reply msg.random [":-h:"]
 
   robot.hear /(ぬるぽ|ヌルポ|NullPointerException)/i, (msg) ->
     msg.reply "ｶﾞｯ"
