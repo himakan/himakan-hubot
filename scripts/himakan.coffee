@@ -32,5 +32,5 @@ module.exports = (robot) ->
     msg.reply "ｶﾞｯ"
 
   robot.hear /((ネム|ねむ|眠)い|nemii)/i, (msg) ->
-    msg.reply msg.random ["おきて", "おきろ！","出たｗｗｗ","おやお"]
+    msg.reply msg.random ["おきて", "おきろ！","出たｗｗｗ","おやお","http://livedoor.blogimg.jp/jigokuno_misawa/imgs/4/0/403d15ec.gif"]
 
