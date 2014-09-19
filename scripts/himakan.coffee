@@ -23,14 +23,14 @@
 module.exports = (robot) ->
 
   robot.hear /(かえ|帰)(る|ろ)/, (msg) ->
-    msg.reply msg.random ["おつお:-h:", "おつー:-h:", "おつかれ〜:-h:", "お疲れさまでした:-h:", "ばいお :-h:", ":-h:"]
+    msg.send msg.random ["おつお:-h:", "おつー:-h:", "おつかれ〜:-h:", "お疲れさまでした:-h:", "ばいお :-h:", ":-h:"]
 
   robot.hear /おつお/, (msg) ->
-    msg.reply msg.random [":-h:"]
+    msg.send msg.random [":-h:"]
 
   robot.hear /(ぬるぽ|ヌルポ|NullPointerException)/i, (msg) ->
-    msg.reply "ｶﾞｯ"
+    msg.send "ｶﾞｯ"
 
   robot.hear /((ネム|ねむ|眠)い|nemii)/i, (msg) ->
-    msg.reply msg.random ["おきて", "おきろ！","出たｗｗｗ","おやお","http://livedoor.blogimg.jp/jigokuno_misawa/imgs/4/0/403d15ec.gif"]
+    msg.send msg.random ["おきて", "おきろ！","出たｗｗｗ","おやお","http://livedoor.blogimg.jp/jigokuno_misawa/imgs/4/0/403d15ec.gif"]
 
