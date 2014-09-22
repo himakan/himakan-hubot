@@ -7,3 +7,6 @@ deploy:
   app: himakan-slackbot
   api_key:
     secure: F5yHpPsV9q++yOTuRrFsXLj/bTiZx9oMvq2oLV+rNGNUTdnH06JQ8FCNwIpJWjwhkhV4Md+Sd4QEeWShLXnvyW93p93B3eX5CRFsSm9FuKwGhaYcCLstB0E8gSJF/xc1nla0xpHl621mVZ4iEln84Wi/KRqA4FHwaYn9sB1laBs=
+notifications:
+  slack:
+    secure: BJyygovcJhGULYD6msubyGeDlez+TZMN6/qfonMM+mv3Zt8WrA5ZtVypMf7QzjuSV2UNQTYj4VhkF0wS/0PCUxqRFI2KfX6P3bB0kk7OU4m7aeyV1A+707bmqR1f7JshFargZ6DRsmxE3GzEmouAamx8JfMD1GvTYiqg0IXf+58=
