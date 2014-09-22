@@ -25,6 +25,9 @@ module.exports = (robot) ->
   robot.hear /(かえ|帰)(る|ろ)/, (msg) ->
     msg.send msg.random ["おつお:-h:", "おつー:-h:", "おつかれ〜:-h:", "お疲れさまでした:-h:", "ばいお :-h:", ":-h:"]
 
+  robot.hear /(おはお|ohao)/, (msg) ->
+    msg.send msg.random ["おはお", "おはー"]
+
   robot.hear /ﾍﾟﾛｫ/, (msg) ->
     msg.send msg.random [":p:"]
 
