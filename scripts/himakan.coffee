@@ -42,6 +42,5 @@ module.exports = (robot) ->
 
   delay = (msg, text) ->
     time = Math.random() * 2000 + 3000
-    setTimeout(time, ->
-      msg.send text
+    setTimeout (-> msg.send text), time
 
