@@ -40,6 +40,9 @@ module.exports = (robot) ->
   robot.hear /((ネム|ねむ|眠)い|nemii)/i, (msg) ->
     delay(msg, msg.random ["おきて", "おきろ！","出たｗｗｗ","おやお","http://livedoor.blogimg.jp/jigokuno_misawa/imgs/4/0/403d15ec.gif"])
 
+  robot.hear /いい(？|?)/i, (msg) ->
+    delay(msg, msg.random ["ダメよーダメダメ"])
+
   delay = (msg, text) ->
     time = Math.random() * 2000 + 3000
     setTimeout (-> msg.send text), time
