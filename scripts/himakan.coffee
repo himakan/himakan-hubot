@@ -23,20 +23,25 @@
 module.exports = (robot) ->
 
   robot.hear /(かえ|帰)(る|ろ)/, (msg) ->
-    msg.send msg.random ["おつお:-h:", "おつー:-h:", "おつかれ〜:-h:", "お疲れさまでした:-h:", "ばいお :-h:", ":-h:"]
+    delay(msg, msg.random ["おつお:-h:", "おつー:-h:", "おつかれ〜:-h:", "お疲れさまでした:-h:", "ばいお :-h:", ":-h:"])
 
   robot.hear /(おはお|ohao)/, (msg) ->
-    msg.send msg.random ["おはお", "おはー"]
+    delay(msg, msg.random ["おはお", "おはー"])
 
   robot.hear /ﾍﾟﾛｫ/, (msg) ->
-    msg.send msg.random [":p:"]
+    delay(msg, msg.random [":p:"])
 
   robot.hear /おつお/, (msg) ->
-    msg.send msg.random [":-h:"]
+    delay(msg, msg.random [":-h:"])
 
   robot.hear /(ぬるぽ|ヌルポ|NullPointerException)/i, (msg) ->
-    msg.send "ｶﾞｯ"
+    delay(msg, "ｶﾞｯ")
 
   robot.hear /((ネム|ねむ|眠)い|nemii)/i, (msg) ->
-    msg.send msg.random ["おきて", "おきろ！","出たｗｗｗ","おやお","http://livedoor.blogimg.jp/jigokuno_misawa/imgs/4/0/403d15ec.gif"]
+    delay(msg, msg.random ["おきて", "おきろ！","出たｗｗｗ","おやお","http://livedoor.blogimg.jp/jigokuno_misawa/imgs/4/0/403d15ec.gif"])
+
+  delay = (msg, text) ->
+    time = Math.random() * 2000 + 3000
+    setTimeout(time, ->
+      msg.send text
 
