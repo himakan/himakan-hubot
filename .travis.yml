@@ -2,3 +2,8 @@ language: node_js
 node_js:
 - '0.11'
 - '0.10'
+deploy:
+  provider: heroku
+  app: himakan-slackbot
+  api_key:
+    secure: F5yHpPsV9q++yOTuRrFsXLj/bTiZx9oMvq2oLV+rNGNUTdnH06JQ8FCNwIpJWjwhkhV4Md+Sd4QEeWShLXnvyW93p93B3eX5CRFsSm9FuKwGhaYcCLstB0E8gSJF/xc1nla0xpHl621mVZ4iEln84Wi/KRqA4FHwaYn9sB1laBs=
