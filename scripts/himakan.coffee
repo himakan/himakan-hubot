@@ -55,7 +55,7 @@ module.exports = (robot) ->
 　　　　  ∧ ∧　　　　　　
 　　　　( ´･ω･)　 プハッ
 　　　　/　　⌒ヽ　　　
-　　　 （人＿__つ_つ"""]))
+　　　（人＿__つ_つ"""]))
 
   freq = (msg, text) ->
     if Math.floor(Math.random() * REPLY_FREQ) == 0
