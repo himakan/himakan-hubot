@@ -20,30 +20,41 @@
 # Author:
 #   <github username of the original script author>
 
+# リプライの頻度 1/3
+REPLY_FREQ = 3
+
+# リプライのディレイ 2〜5
+REPLY_DELAY_MIN = 2
+REPLY_DELAY_MAX = 5
+
 module.exports = (robot) ->
 
   robot.hear /(かえ|帰)(る|ろ)/, (msg) ->
-    delay(msg, msg.random ["おつお:-h:", "おつー:-h:", "おつかれ〜:-h:", "お疲れさまでした:-h:", "ばいお :-h:", ":-h:"])
+    freq(msg, msg.random ["おつお:-h:", "おつー:-h:", "おつかれ〜:-h:", "お疲れさまでした:-h:", "ばいお :-h:", ":-h:"])
 
   robot.hear /(おはお?|ohao?|o-h-a|オハオ?)/, (msg) ->
-    delay(msg, msg.random ["おはお", "おはー"])
+    freq(msg, msg.random ["おはお", "おはー"])
 
   robot.hear /ﾍﾟﾛｫ/, (msg) ->
-    delay(msg, msg.random [":p:"])
+    freq(msg, msg.random [":p:"])
 
   robot.hear /おつお/, (msg) ->
-    delay(msg, msg.random [":-h:"])
+    freq(msg, msg.random [":-h:"])
 
   robot.hear /(ぬるぽ|ヌルポ|NullPointerException)/i, (msg) ->
-    delay(msg, "ｶﾞｯ")
+    freq(msg, "ｶﾞｯ")
 
   robot.hear /((ネム|ねむ|眠)い|nemii)/i, (msg) ->
-    delay(msg, msg.random ["おきて", "おきろ！","出たｗｗｗ","おやお","http://livedoor.blogimg.jp/jigokuno_misawa/imgs/4/0/403d15ec.gif"])
+    freq(msg, msg.random ["おきて", "おきろ！","出たｗｗｗ","おやお","http://livedoor.blogimg.jp/jigokuno_misawa/imgs/4/0/403d15ec.gif"])
 
   robot.hear /いい(？|\?)/i, (msg) ->
-    delay(msg, msg.random ["ダメよーダメダメ"])
+    freq(msg, msg.random ["ダメよーダメダメ"])
 
+  freq = (msg, text) ->
+    if Math.floor(Math.random() * REPLY_FREQ) == 0
+      delay(msg, text)
+    
   delay = (msg, text) ->
-    time = Math.random() * 2000 + 3000
-    setTimeout (-> msg.send text), time
+    delay = Math.random() * REPLY_DELAY_MIN + (REPLY_DELAY_MAX - REPLY_DELAY_MIN)
+    setTimeout (-> msg.send text), delay
 
