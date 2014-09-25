@@ -50,7 +50,7 @@ module.exports = (robot) ->
   robot.hear /いい(？|\?)/i, (msg) ->
     freq(msg, msg.random ["ダメよーダメダメ"])
   
-  robot.hear /かえりたい)/i, (msg) ->
+  robot.hear /かえりたい/i, (msg) ->
     freq(msg, msg.random ["　　　 　 ∧ ∧　　　　　　
 　　　　( ´･ω･)　 プハッ
 　　　　/　　⌒ヽ　　　
