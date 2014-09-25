@@ -23,9 +23,9 @@
 # リプライの頻度 1/3
 REPLY_FREQ = 3
 
-# リプライのディレイ 2〜5
-REPLY_DELAY_MIN = 2
-REPLY_DELAY_MAX = 5
+# リプライのディレイ 2秒〜5秒
+REPLY_DELAY_MIN = 2000
+REPLY_DELAY_MAX = 5000
 
 module.exports = (robot) ->
 
