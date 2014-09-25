@@ -50,18 +50,19 @@ module.exports = (robot) ->
   robot.hear /いい(？|\?)/i, (msg) ->
     freq(msg, msg.random ["ダメよーダメダメ"])
   
-  robot.hear /かえりたい/i, (msg) ->
-    delay(msg, msg.random(["""
+  robot.hear /(帰|かえ)りたい/i, (msg) ->
+    kaeritai = """
 　　　　  ∧ ∧　　　　　　
 　　　　( ´･ω･)　 プハッ
 　　　　/　　⌒ヽ　　　
-　　　（人＿__つ_つ"""]))
+　　　（人＿__つ_つ"""
+    delay(msg, msg.random [kaeritai])
 
   freq = (msg, text) ->
     if Math.floor(Math.random() * REPLY_FREQ) == 0
       delay(msg, text)
     
   delay = (msg, text) ->
-    delay = Math.random() * REPLY_DELAY_MIN + (REPLY_DELAY_MAX - REPLY_DELAY_MIN)
-    setTimeout (-> msg.send text), delay
+    time = Math.random() * REPLY_DELAY_MIN + (REPLY_DELAY_MAX - REPLY_DELAY_MIN)
+    setTimeout (-> msg.send text), time
 
