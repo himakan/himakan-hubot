@@ -166,7 +166,7 @@ module.exports = (robot) ->
 
       # notify to each rooms
       for roomId in store.getRooms()
-        robot.messageRoom roomId, """
+        robot.messageRoom "#"+roomId, """
           @#{store.userId} fav! #{track.title}
           #{track.permalink_url.replace(/^https?/, 'https')}
         """
