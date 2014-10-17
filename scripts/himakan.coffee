@@ -29,10 +29,10 @@ REPLY_DELAY_MAX = 5000
 
 module.exports = (robot) ->
 
-  robot.hear /(かえ|帰)(る|ろ)/, (msg) ->
+  robot.hear /^(かえ|帰)(る|ろ)/, (msg) ->
     freq(msg, msg.random ["おつお:-h:", "おつー:-h:", "おつかれ〜:-h:", "お疲れさまでした:-h:", "ばいお :-h:", ":-h:"])
 
-  robot.hear /(おはお?|ohao?|o-h-a|オハオ?)/, (msg) ->
+  robot.hear /^(おはお?|ohao?|o-h-a|オハオ?)/, (msg) ->
     freq(msg, msg.random ["おはお", "おはー"])
 
   robot.hear /ﾍﾟﾛｫ/, (msg) ->
@@ -50,7 +50,7 @@ module.exports = (robot) ->
   robot.hear /いい(？|\?)/i, (msg) ->
     freq(msg, msg.random ["ダメよーダメダメ"])
   
-  robot.hear /(帰|かえ)りたい/i, (msg) ->
+  robot.hear /^(帰|かえ)りたい$/i, (msg) ->
     kaeritai = """
 　　　　  ∧ ∧　　　　　　
 　　　　( ´･ω･)　 プハッ
