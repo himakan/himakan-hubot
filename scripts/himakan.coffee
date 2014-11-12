@@ -59,7 +59,7 @@ module.exports = (robot) ->
     delay(msg, msg.random [kaeritai])
     
   robot.hear /(かずお|カズオ)/i, (msg) ->
-    delay(msg, msg.random([
+    freq(msg, msg.random([
         "カズオ「死にたくなくなくない？ｯｼｮ？」",
         "カズオ「くらもとさーん、明日バーベキューしようぜｗｗｗｗｗｗ」",
         "カズオ「ｲｹﾒﾝとか幸せなやつは俺が殺してやっから」",
